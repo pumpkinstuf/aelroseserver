@@ -6,7 +6,7 @@ const port = 8000;
 console.log("Starting server...");
 
 app.get("/", (req, res) => {
-  res.send("No content");
+  res.send("╰(*°▽°*)╯\nNothing here..");
 });
 
 app.post("/startserver", (req, res) => {
