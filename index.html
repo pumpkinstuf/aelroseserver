@@ -46,10 +46,11 @@
           return
         }
         try {
-          addLog("Sending request to server...");
+          addLog("Pinging the server... (This may take a while when the server is asleep)");
           const response = await fetch("./startserver", {
             method: "POST",
           });
+          addLog("Sending request to server...");
           if (!response.ok) {
             addLog("Something Went Wrong:");
             addLog(`Internal Server Error ${response.status}`);
