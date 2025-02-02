@@ -1,5 +1,6 @@
 // aelrose server
 const express = require("express");
+const freakyping = require("./FreakyHttpRequest.js").XMLHttpRequest
 const app = express();
 const port = 8000;
 
@@ -12,7 +13,7 @@ app.get("/", (req, res) => {
 app.post("/startserver", (req, res) => {
   console.log("Got request");
 
-  const xhr = new XMLHttpRequest();
+  const xhr = new freakyping();
   xhr.withCredentials = true;
 
   xhr.addEventListener("readystatechange", function () {
