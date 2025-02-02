@@ -21,7 +21,9 @@
         button.disabled = true;
         button.innerHTML = "Pinging server...";
         try {
-          const response = await fetch("./startserver");
+          const response = await fetch("./startserver",{
+            method: "POST"
+          });
           if (!response.ok) {
             button.innerHTML = `Internal Server Error ${response.status}`;
             throw new Error(`Response status: ${response.status}`);

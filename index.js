@@ -10,6 +10,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/startserver", (req, res) => {
+  console.log("Got request");
+
   const xhr = new XMLHttpRequest();
   xhr.withCredentials = true;
 
